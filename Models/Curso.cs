@@ -25,5 +25,13 @@ namespace csharp_manipulando_dados_dio.Models
         {
             return Alunos.Remove(aluno);
         }
+
+        public void ListarAlunos()
+        {
+            foreach (Pessoa aluno in Alunos)
+            {
+                Console.WriteLine(aluno.NomeCompleto);
+            }
+        }
     }
 }
