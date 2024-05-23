@@ -30,7 +30,13 @@ namespace csharp_manipulando_dados_dio.Models
         {
             foreach (Pessoa aluno in Alunos)
             {
-                Console.WriteLine(aluno.NomeCompleto);
+                Console.WriteLine($"Alunos do curso de {Nome}:");
+                for (int Contador = 0; Contador < Alunos.Count; Contador++)
+                {
+                    //Concatenação de string
+                    string texto = "Nº " + (Contador + 1) + " - " + Alunos[Contador].NomeCompleto;
+                    Console.WriteLine(texto);
+                }
             }
         }
     }
