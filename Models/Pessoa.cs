@@ -7,6 +7,12 @@ namespace csharp_manipulando_dados_dio.Models
 {
     public class Pessoa
     {
+        public Pessoa() { Sobrenome = ""; }
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
         private string _nome;
         private int _idade;
         private string _sobrenome;
