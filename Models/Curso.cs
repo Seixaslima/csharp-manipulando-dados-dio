@@ -20,5 +20,10 @@ namespace csharp_manipulando_dados_dio.Models
             int quantidade = Alunos.Count;
             return quantidade;
         }
+
+        public bool RemoverAluno(Pessoa aluno)
+        {
+            return Alunos.Remove(aluno);
+        }
     }
 }
