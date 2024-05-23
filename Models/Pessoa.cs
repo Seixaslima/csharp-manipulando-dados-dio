@@ -9,6 +9,7 @@ namespace csharp_manipulando_dados_dio.Models
     {
         private string _nome;
         private int _idade;
+        private string _sobrenome;
         public string Nome
         {
             get => _nome.ToUpper();
@@ -21,7 +22,12 @@ namespace csharp_manipulando_dados_dio.Models
                 _nome = value;
             }
         }
-
+        public string Sobrenome
+        {
+            get => _sobrenome.ToUpper();
+            set => _sobrenome = value;
+        }
+        public string NomeCompleto => $"{Nome} {Sobrenome}";
         public int Idade
         {
             get => _idade;
@@ -37,7 +43,7 @@ namespace csharp_manipulando_dados_dio.Models
 
         public void Apresentar()
         {
-            Console.WriteLine($"Nome: {Nome}, Idade: {Idade}");
+            Console.WriteLine($"Nome: {NomeCompleto}, Idade: {Idade}");
         }
     }
 }
