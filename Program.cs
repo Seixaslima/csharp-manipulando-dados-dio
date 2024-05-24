@@ -1,8 +1,12 @@
 ﻿using csharp_manipulando_dados_dio.Models;
 
+//mudando localização globalmente
+using System.Globalization;
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+
 
 //Formatação de valores monetarios
-decimal ValorMonetario = 5.01M;
+decimal ValorMonetario = 1485.37M;
 Console.WriteLine($"{ValorMonetario:c}");
 
 
