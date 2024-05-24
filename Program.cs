@@ -8,7 +8,7 @@ using csharp_manipulando_dados_dio.Models;
 try
 {
 
-  string[] linhas = File.ReadAllLines("./Arquivos/d/arquivoLeitura.txt");
+  string[] linhas = File.ReadAllLines("./Arquivos/arquivoLeitura.txt");
 
   foreach (string linha in linhas)
   {
@@ -30,7 +30,10 @@ catch (Exception ex)
 
   Console.WriteLine($"Ocorreu uma exceção Generica: {ex.Message}");
 }
-
+finally
+{
+  Console.WriteLine("Executando bloco finally");
+}
 
 
 /* Formatando e usando DateTime
