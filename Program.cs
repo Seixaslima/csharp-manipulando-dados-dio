@@ -3,7 +3,20 @@ using csharp_manipulando_dados_dio.Models;
 
 /* Execuçoes e exeçoes */
 
-//try catch
+/* throw */
+try
+{
+  new ExemploExcecao().Metodo1();
+}
+catch (Exception ex)
+{
+  Console.WriteLine($"Exceção tratada: {ex.Message}");
+  Console.WriteLine($"StackTrace: {ex.StackTrace}");
+}
+
+
+
+/*try catch
 
 try
 {
@@ -33,7 +46,7 @@ catch (Exception ex)
 finally
 {
   Console.WriteLine("Executando bloco finally");
-}
+} */
 
 
 /* Formatando e usando DateTime
