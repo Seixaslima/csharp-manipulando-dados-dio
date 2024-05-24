@@ -8,17 +8,27 @@ using csharp_manipulando_dados_dio.Models;
 try
 {
 
-  string[] linhas = File.ReadAllLines("./Arquivos/arquivo_Leitura.txt");
+  string[] linhas = File.ReadAllLines("./Arquivos/d/arquivoLeitura.txt");
 
   foreach (string linha in linhas)
   {
     Console.WriteLine(linha);
   }
 }
-catch (System.Exception ex)
+catch (FileNotFoundException ex)
 {
 
-  Console.WriteLine($"Ocorreu uma exeção: {ex.Message}");
+  Console.WriteLine($"Ocorreu uma exceção arquivo não encontrado: {ex.Message}");
+}
+catch (DirectoryNotFoundException ex)
+{
+
+  Console.WriteLine($"Ocorreu uma exceção pasta não encontrada: {ex.Message}");
+}
+catch (Exception ex)
+{
+
+  Console.WriteLine($"Ocorreu uma exceção Generica: {ex.Message}");
 }
 
 
