@@ -1,6 +1,29 @@
-﻿using csharp_manipulando_dados_dio.Models;
+﻿using System.Globalization;
+using csharp_manipulando_dados_dio.Models;
 // Formatando e usando DateTime
 
+//parse de data
+DateTime date = DateTime.Parse("15/01/1946 17:23:15");
+// DateTime date = DateTime.Parse("32/01/1946 17:23:15");
+//Gera uma exeção e para o programa
+Console.WriteLine(date);
+
+string DataString = "2024-17-01 18:00";
+
+bool sucesso = DateTime.TryParseExact(DataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dateTryParse);
+
+if (sucesso)
+{
+  Console.WriteLine($"Conversão com sucesso, Data: {dateTryParse}");
+}
+else
+{
+  Console.WriteLine($"A string {DataString} não é uma data valida");
+}
+
+
+/*
+//Formatando DateTime
 DateTime date = DateTime.Now;
 
 Console.WriteLine(date);
@@ -11,7 +34,7 @@ Console.WriteLine(date.ToString("yy-MM-dd hh-mm"));
 Console.WriteLine(date.ToShortDateString());
 Console.WriteLine(date.ToShortTimeString());
 
-
+*/
 
 
 /*
