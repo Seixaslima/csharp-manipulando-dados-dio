@@ -3,11 +3,22 @@ using csharp_manipulando_dados_dio.Models;
 
 /* Execuçoes e exeçoes */
 
-string[] linhas = File.ReadAllLines("./Arquivos/arquivoLeitura.txt");
+//try catch
 
-foreach (string linha in linhas)
+try
 {
-  Console.WriteLine(linha);
+
+  string[] linhas = File.ReadAllLines("./Arquivos/arquivo_Leitura.txt");
+
+  foreach (string linha in linhas)
+  {
+    Console.WriteLine(linha);
+  }
+}
+catch (System.Exception ex)
+{
+
+  Console.WriteLine($"Ocorreu uma exeção: {ex.Message}");
 }
 
 
