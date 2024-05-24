@@ -14,6 +14,16 @@ Console.WriteLine($"{ValorMonetario:c}");
 Console.WriteLine("Mudando a cultura especificamente nesse texto");
 Console.WriteLine(ValorMonetario.ToString("c", CultureInfo.CreateSpecificCulture("pt-PT")));
 
+// outras formas de formatar
+Console.WriteLine(ValorMonetario.ToString("N2"));
+
+//porcentagem
+double porcentagem = 0.365;
+Console.WriteLine(porcentagem.ToString("P"));
+
+int numero = 123456;
+Console.WriteLine(numero.ToString("##-##-##"));
+Console.WriteLine(numero.ToString("##/##/##"));
 
 //Aulas anteriores
 // Pessoa p1 = new Pessoa(nome: "Lucas", sobrenome: "Seixas");
