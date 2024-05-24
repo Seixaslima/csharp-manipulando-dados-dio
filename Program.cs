@@ -1,6 +1,18 @@
 ﻿using System.Globalization;
 using csharp_manipulando_dados_dio.Models;
-// Formatando e usando DateTime
+
+/* Execuçoes e exeçoes */
+
+string[] linhas = File.ReadAllLines("./Arquivos/arquivoLeitura.txt");
+
+foreach (string linha in linhas)
+{
+  Console.WriteLine(linha);
+}
+
+
+
+/* Formatando e usando DateTime
 
 //parse de data
 DateTime date = DateTime.Parse("15/01/1946 17:23:15");
@@ -20,6 +32,8 @@ else
 {
   Console.WriteLine($"A string {DataString} não é uma data valida");
 }
+
+*/
 
 
 /*
