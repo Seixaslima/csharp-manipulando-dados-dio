@@ -1,5 +1,20 @@
 ﻿using csharp_manipulando_dados_dio.Models;
+// Formatando e usando DateTime
 
+DateTime date = DateTime.Now;
+
+Console.WriteLine(date);
+Console.WriteLine(date.ToString("dd-MM-yyyy HH-mm"));
+Console.WriteLine(date.ToString("dd/MM/yyyy hh-mm"));
+Console.WriteLine(date.ToString("yyyy-MM-dd hh-mm"));
+Console.WriteLine(date.ToString("yy-MM-dd hh-mm"));
+Console.WriteLine(date.ToShortDateString());
+Console.WriteLine(date.ToShortTimeString());
+
+
+
+
+/*
 //mudando localização globalmente
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
@@ -23,7 +38,7 @@ Console.WriteLine(porcentagem.ToString("P"));
 
 int numero = 123456;
 Console.WriteLine(numero.ToString("##-##-##"));
-Console.WriteLine(numero.ToString("##/##/##"));
+Console.WriteLine(numero.ToString("##/##/##")); */
 
 //Aulas anteriores
 // Pessoa p1 = new Pessoa(nome: "Lucas", sobrenome: "Seixas");
