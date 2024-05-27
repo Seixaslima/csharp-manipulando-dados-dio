@@ -5,11 +5,12 @@ using csharp_manipulando_dados_dio.Models;
 
 LeituraArquivo arquivo = new LeituraArquivo();
 
-var (sucesso, linhasArquivo, numeroLinhas) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+//Descarte de informação
+var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
 
 if (sucesso)
 {
-  Console.WriteLine($"Arquivo com {numeroLinhas} linhas");
+  //Console.WriteLine($"Arquivo com {numeroLinhas} linhas");
   foreach (string linha in linhasArquivo)
   {
     Console.WriteLine(linha);
