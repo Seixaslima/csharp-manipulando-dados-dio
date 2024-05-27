@@ -1,18 +1,38 @@
 ﻿using System.Globalization;
 using csharp_manipulando_dados_dio.Models;
 
-/* Execuçoes e exeçoes */
+//Tuplas
+(int, string, string, decimal) tupla = (1, "Suco", "Maça", 5.30M);
 
-/* throw */
-try
-{
-  new ExemploExcecao().Metodo1();
-}
-catch (Exception ex)
-{
-  Console.WriteLine($"Exceção tratada: {ex.Message}");
-  Console.WriteLine($"StackTrace: {ex.StackTrace}");
-}
+Console.WriteLine($"Id: {tupla.Item1} ");
+Console.WriteLine($"Produto: {tupla.Item2} ");
+Console.WriteLine($"Variação: {tupla.Item3} ");
+Console.WriteLine($"Preço: {tupla.Item4} ");
+
+//Tupla nomeada
+(int id, string produto, string variacao, decimal preco) tuplaNomeada = (1, "Suco", "Maça", 5.30M);
+Console.WriteLine($"Id: {tuplaNomeada.id} ");
+Console.WriteLine($"Produto: {tuplaNomeada.produto} ");
+Console.WriteLine($"Variação: {tuplaNomeada.variacao} ");
+Console.WriteLine($"Preço: {tuplaNomeada.preco} ");
+
+// Outras formas de criar tuplas
+ValueTuple<int, string, string, decimal> outroTipoTupla = (1, "Suco", "Maça", 5.30M);
+var variacaoDeTupla = Tuple.Create(1, "Suco", "Maça", 5.30M);
+
+
+// //Execuçoes e exeçoes
+
+// /* throw */
+// try
+// {
+//   new ExemploExcecao().Metodo1();
+// }
+// catch (Exception ex)
+// {
+//   Console.WriteLine($"Exceção tratada: {ex.Message}");
+//   Console.WriteLine($"StackTrace: {ex.StackTrace}");
+// }
 
 
 
@@ -47,6 +67,7 @@ finally
 {
   Console.WriteLine("Executando bloco finally");
 } */
+
 
 
 /* Formatando e usando DateTime
