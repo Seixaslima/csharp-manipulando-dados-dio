@@ -6,8 +6,8 @@ using Newtonsoft.Json;
 
 List<Venda> listaVenda = [];
 
-Venda v1 = new(1, "Material de escritorio", 10.50M);
-Venda v2 = new(2, "Produtos de beleza", 17.99M);
+Venda v1 = new(1, "Material de escritorio", 10.50M,DateTime.Now);
+Venda v2 = new(2, "Produtos de beleza", 17.99M,DateTime.Now);
 
 listaVenda.Add(v1);
 listaVenda.Add(v2);

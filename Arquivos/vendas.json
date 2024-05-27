@@ -2,11 +2,13 @@
   {
     "Id": 1,
     "Produto": "Material de escritorio",
-    "Preco": 10.50
+    "Preco": 10.50,
+    "DataVenda": "2024-05-27T11:02:32.6503897-03:00"
   },
   {
-    "Id": 3,
+    "Id": 2,
     "Produto": "Produtos de beleza",
-    "Preco": 17.99
+    "Preco": 17.99,
+    "DataVenda": "2024-05-27T11:02:32.6580809-03:00"
   }
 ]
