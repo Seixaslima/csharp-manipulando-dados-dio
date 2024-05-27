@@ -4,11 +4,11 @@ using csharp_manipulando_dados_dio.Models;
 
 // Descontrutor
 
-Pessoa p1 = new Pessoa("Jose", "Santos");
+// Pessoa p1 = new Pessoa("Jose", "Santos");
 
-(string nome, string sobrenome) = p1;
+// (string nome, string sobrenome) = p1;
 
-Console.WriteLine($"{nome} {sobrenome}");
+// Console.WriteLine($"{nome} {sobrenome}");
 
 
 // //Tuplas
