@@ -2,21 +2,36 @@
 using csharp_manipulando_dados_dio.Models;
 using Newtonsoft.Json;
 
+//Deserialização
+
+string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+foreach (var venda in listaVendas)
+{
+  Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, " +
+            $"Preço: {venda.Preco}, Data venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")} ");
+}
+
+
+
+
 //Serialização
 
-List<Venda> listaVenda = [];
+// List<Venda> listaVenda = [];
 
-Venda v1 = new(1, "Material de escritorio", 10.50M,DateTime.Now);
-Venda v2 = new(2, "Produtos de beleza", 17.99M,DateTime.Now);
+// Venda v1 = new(1, "Material de escritorio", 10.50M,DateTime.Now);
+// Venda v2 = new(2, "Produtos de beleza", 17.99M,DateTime.Now);
 
-listaVenda.Add(v1);
-listaVenda.Add(v2);
+// listaVenda.Add(v1);
+// listaVenda.Add(v2);
 
-string vendaSerializada = JsonConvert.SerializeObject(listaVenda, Formatting.Indented);
+// string vendaSerializada = JsonConvert.SerializeObject(listaVenda, Formatting.Indented);
 
-File.WriteAllText("Arquivos/vendas.json", vendaSerializada);
+// File.WriteAllText("Arquivos/vendas.json", vendaSerializada);
 
-Console.WriteLine(vendaSerializada);
+// Console.WriteLine(vendaSerializada);
 
 
 // Descontrutor
