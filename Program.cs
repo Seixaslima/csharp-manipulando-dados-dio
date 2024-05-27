@@ -1,5 +1,13 @@
 ﻿using System.Globalization;
 using csharp_manipulando_dados_dio.Models;
+using Newtonsoft.Json;
+
+//Serialização
+
+Venda v1 = new(1, "Material de escritorio", 10.50M);
+string vendaSerializada = JsonConvert.SerializeObject(v1, Formatting.Indented);
+
+Console.WriteLine(vendaSerializada);
 
 
 // Descontrutor
