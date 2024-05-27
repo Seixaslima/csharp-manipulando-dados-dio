@@ -13,6 +13,13 @@ namespace csharp_manipulando_dados_dio.Models
             Nome = nome;
             Sobrenome = sobrenome;
         }
+
+        public void Deconstruct(out string nome, out string sobrenome)
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
+
         private string _nome;
         private int _idade;
         private string _sobrenome;

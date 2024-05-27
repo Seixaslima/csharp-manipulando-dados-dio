@@ -1,25 +1,35 @@
 ﻿using System.Globalization;
 using csharp_manipulando_dados_dio.Models;
 
-//Tuplas
 
-LeituraArquivo arquivo = new LeituraArquivo();
+// Descontrutor
 
-//Descarte de informação
-var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+Pessoa p1 = new Pessoa("Jose", "Santos");
 
-if (sucesso)
-{
-  //Console.WriteLine($"Arquivo com {numeroLinhas} linhas");
-  foreach (string linha in linhasArquivo)
-  {
-    Console.WriteLine(linha);
-  }
-}
-else
-{
-  Console.WriteLine("Não foi possivel ler o arquivo");
-}
+(string nome, string sobrenome) = p1;
+
+Console.WriteLine($"{nome} {sobrenome}");
+
+
+// //Tuplas
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// //Descarte de informação
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+// if (sucesso)
+// {
+//   //Console.WriteLine($"Arquivo com {numeroLinhas} linhas");
+//   foreach (string linha in linhasArquivo)
+//   {
+//     Console.WriteLine(linha);
+//   }
+// }
+// else
+// {
+//   Console.WriteLine("Não foi possivel ler o arquivo");
+// }
 
 
 
