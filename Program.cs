@@ -7,6 +7,8 @@ using Newtonsoft.Json;
 Venda v1 = new(1, "Material de escritorio", 10.50M);
 string vendaSerializada = JsonConvert.SerializeObject(v1, Formatting.Indented);
 
+File.WriteAllText("Arquivos/vendas.json", vendaSerializada);
+
 Console.WriteLine(vendaSerializada);
 
 
